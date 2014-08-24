@@ -83,18 +83,22 @@ def move_right(text, screen):
   screen.refresh()
   global servo_x, center, new, pos
   new = new - 1.0
-  if pos == 6.0:
+  while 0.0 <= new <= 12.0
+#  if pos == 6.0:
     servo_x.ChangeDutyCycle(center + new)
     time.sleep(0.25)
-  elif 1.0 < pos < 6.0:
-    servo_x.ChangeDutyCycle(pos + new)
-    time.sleep(0.25)
-  elif 6.0 < pos <= 12.0:
-    servo_x.ChangeDutyCycle(pos + new)
-  elif pos <= 1.0:
-    servo_x.ChangeDutyCycle(0.0)
-  elif center + new < 1.0:
-    servo_x.ChangeDutyCycle(center - new)
+  
+  servo_x.ChangeDutyCycle(0.0)
+  print "Stop it!"
+#  elif 1.0 < pos < 6.0:
+#    servo_x.ChangeDutyCycle(pos + new)
+#    time.sleep(0.25)
+#  elif 6.0 < pos <= 12.0:
+#    servo_x.ChangeDutyCycle(pos + new)
+#  elif pos <= 1.0:
+#    servo_x.ChangeDutyCycle(0.0)
+#  elif center + new < 1.0:
+#    servo_x.ChangeDutyCycle(center - new)
 
 # Moves text left by one
 def move_left(text, screen):
