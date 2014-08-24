@@ -84,7 +84,7 @@ def move_right(text, screen):
   global servo_x, center, new, pos
   if center + new < 1.0:
     center + new = 0
-  else new = new - 1.0
+  else new == new - 1.0
   if pos == 6.0:
     servo_x.ChangeDutyCycle(center + new)
     time.sleep(0.25)
