@@ -94,7 +94,7 @@ def move_right(text, screen):
   elif pos <= 1.0:
     servo_x.ChangeDutyCycle(0.0)
   elif center + new < 1.0:
-    center + new = 0.0
+    servo_x.ChangeDutyCycle(center - new)
 
 # Moves text left by one
 def move_left(text, screen):
